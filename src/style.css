@@ -1,3 +1,24 @@
 body{
     text-align: center;
+    background-color: aquamarine;
+}
+.container{
+    background-color: azure;
+    max-width: 50%;
+    margin-left: 25%;
+}
+.city{
+    margin-right: 10px;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.time{
+    margin-left: 70%;
+    font-size: 20px;
+    margin-bottom: 25px;
+
+}
+.select-city{
+    max-width: 60%;
 }
