@@ -28,3 +28,20 @@ torontoTimeElement.innerHTML = torontoTime.format("h:mm:ss [<small>]A[</small>]"
 };
 updateTime()
 setInterval(updateTime, 1000);
+
+function displayTime(event){
+    
+    let cityTimeZone = event.target.value;
+    let cityName = cityTimeZone.split("/")[1];
+    let cityTime =moment().tz(cityTimeZone);
+    let citiesElement = document.querySelector("#cities");
+    citiesElement.innerHTML = `<div class="city" id="rome">
+    <div>
+     <h2>${cityName}</h2> 
+    <div class="date">${cityTime.format("dddd MMMM Do YYYY")}</div>
+</div>
+    <div class="time">${cityTime.format("h:mm:ss [<small>]A[</small>]")}</div>
+</div>`;
+    }
+let selectElement =document.querySelector("#select-city");
+selectElement.addEventListener("change", displayTime);
